@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.newbi {}
+	</style>
+</head>
+
+<body>
+	<input type="text" id="inp">
+	<script>
+	// 	var obj={
+	// 		"0":'a',
+	// 		"1":'b',
+	// 		"2":'c',
+	// 		"push":Array.prototype.push,
+	// 		"splice":Array.prototype.splice
+	// 	}
+	// Array.prototype.push=function(target){
+	// 	obj[obj.length]=target;
+	// 	obj.length++;
+	// }
+	// 
+	// 判断数据类型
+	// function type(target){
+	// 	var template={
+	// 		"[object Array]":"array",
+	// 		"[object object]":"object",
+	// 		"[object Number]":"number - object",
+	// 		"[object Boolean]":"boolean - object",
+	// 		"[object String]":"string - object"
+	// 	}
+	// 	if (target===null) {return null;}
+	// 	// if(typeof(target)=='function'){return 'function';}
+	// 	else if(typeof(target)=="object"){
+	// 		var str=Object.prototype.toString.call(target);
+	// 		return template[str];
+	// 	}
+	// 	else{return typeof(target);}
+	// }
+
+	// 数组去重
+	// var arr=[1,1,1,1,2,2,2,2,1,1,1,1];
+	// Array.prototype.unique=function(){
+	// 	var temp={};
+	// 	var arr=[];
+	// 	for (var i = 0,len=this.length; i <len; i++) {
+	// 		if(!temp[this[i]]){
+	// 			temp[this[i]]="abc";
+	// 			arr.push(this[i]);
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+
+
+	// function Person(name){
+	// 	var money=100;
+	// 	this.name=name;
+	// 	this.makeMoney=function(){
+	// 		money++;
+	// 		console.log(money)
+	// 	}
+	// 	this.offer=function(){
+	// 		money--;
+	// 	}
+	// }
+	// var person =new Person();
+
+	// var n=parseInt(window.prompt('input'));
+	// var mul=1;
+	// for(var i=0;i<n;i++){
+	// 	mul*=2;
+	// }
+	// console.log(mul);
+
+	// var mul=1;
+	// for(var i=1;i<=n;i++){
+	// 	mul*=i;
+	// }
+	// console.log(mul);
+
+	// var n2=parseInt(window.prompt('input'));
+	// var n3=parseInt(window.prompt('input'));
+	// if(n>n2){
+	// 	if(n>n3){
+	// 		console.log(n);
+	// 	}else{
+	// 		console.log(n3);
+	// 	}
+	// }else{
+	// 	if(n2>n3){
+	// 		console.log(n2);
+	// 	}else{
+	// 		console.log(n3);
+	// 	}
+	// }
+
+	// 递归
+	// function jc(n){
+	// 	if(n==1){
+	// 		return 1;
+	// 	}
+	// 	return n*jc(n-1);
+	// }
+
+
+	</script>
+	<script>
+	// function retElementChild(node){
+	// 	var arr=[],
+	// 	child=node.childNodes,
+	// 	len=child.length;
+	// 	for(var i=0;i<len;i++){
+	// 		if(child[i].nodeType===1){
+	// 			arr.push(child[i]);
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+	// console.log(reElementChild(div));
+
+
+	// function retParent(elem,n){
+	// 	while(elem&&n){
+	// 		elem=elem.parentElement;
+	// 		n--;
+	// 	}
+	// 	return elem;
+	// }
+	// var i=document.getElementsByTagName('i')[0];
+
+	// Element.prototype.myChildren=function(){
+	// 	var child=this.childNodes;
+	// 	var len =child.length;
+	// 	var arr=[];
+	// 	for(var i=0;i<len;i++){
+	// 		if(child[i].nodeType==1){
+	// 			arr.push(child[i]);
+	// 		}
+	// 	}
+	// 	return arr;
+	// }
+	// var div=document.getElementsByTagName('div')[0];
+
+
+	// function retSibling(e,n){
+	// 	while(e&&n){
+	// 		if(n>0){
+	// 			e=e.nextElementSibling;
+	// 			n--;
+	// 		}else{
+	// 			e=e.previousElementSibling;
+	// 			n++;
+	// 		}
+	// 	}
+	// 	return e;
+	// }
+	// var strong=document.getElementsByTagName('strong')[0];
+
+	// insertAfter
+	// Element.prototype.insertAfter=function(targetNode,afterNode){
+	// 	var beforeNode=afterNode.nextElementSibling;
+	// 	if(beforeNode==null){
+	// 		this.appendChild(targetNode);
+	// 	}else{
+	// 		this.insertBefore(targetNode,beforeNode);
+	// 	}
+	// }
+	// var div=document.getElementsByTagName('div')[0];
+	// var p=document.createElement('p');
+	// var b=document.getElementsByTagName('b')[0];
+	// var span=document.getElementsByTagName('span')[0];
+
+
+	</script>
+	<script>
+
+		// var reg = /ab/g;
+		// var str = "abchhababab";
+
+		// i 忽略大小写
+		// g 全局匹配
+		// m 多行匹配
+
+		// \w ===[0-9A-z_]
+		// \W ===[^\w]
+		// \d ===[0-9]
+		// \D ===[^\d]
+		// \s ===[\t\\n\r\f ]
+		// \S ===[^\s]
+		// \b ===单词边界
+		// \B ===非单词边界
+		// . ===[^\r\n]
+		// n+ {1,}
+		// n* {0,}
+		// n? {0,1}
+		// n{x} {x}
+		// n{x,y} {x,y}
+
+		// console.log(reg.exec(str))
+		// console.log(reg.lastIndex)
+		// console.log(reg.exec(str))
+
+
+
+	</script>
+	<script>
+		// var oInp=document.getElementById('inp');
+		// var timer=null;
+		// function ajax(e){
+		// 	console.log(e,this.value)
+		// }
+		// function debounce(handler,delay){
+		// 	var timer=null;
+		// 	return function(){
+		// 		var _self=this,_arg=arguments;
+		// 		clearTimeout(timer);
+		// 		timer=setTimeout(function(){
+		// 			handler.apply(_self,_arg);
+		// 		},delay)
+		// 	}
+		// }
+		// oInp.oninput=debounce(ajax,1000);
+	</script>
+	<script>
+		var number = 5;
+		var obj = {
+			number: 3,
+			fn1: (function () {
+				var number;
+				this.number *= 2;
+				number = number * 2;
+				number = 3;
+				return function () {
+					var num = this.number;
+					this.number *= 2;
+					console.log(num);
+					number *= 3;
+					console.log(number);
+				}
+			})()
+		}
+		var fn1 = obj.fn1;
+		// = function () {
+			// var num = this.number;
+			// 		this.number *= 2;
+			// 		console.log(num);
+			// 		number *= 3;
+			// 		console.log(number);
+			// 	}
+			// this.number 10 
+			// number  3
+
+		fn1.call(null);
+		obj.fn1();
+		console.log(window.number);
+	</script>
+</body>
+
+</html>
